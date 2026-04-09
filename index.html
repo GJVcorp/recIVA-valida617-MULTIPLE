@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:," />
+    <title>recuperaIVA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">
+                <span id="toggleAnalisisDetalle" class="title-button" title="Clic para ampliar o reducir casilleros del analisis">recuperaIVA</span>
+                <span class="slogan">"Tu aliado para recuperar lo que te pertenece"</span>
+            </h1>
+
+            <div class="powered-wrapper">
+                <div class="powered-container">
+                    <p class="powered-by">
+                        powered by <a href="https://youtube.com/shorts/hdSugISiGcE?feature=share" target="_blank">rentabilidadECUADOR</a>
+                    </p>
+                    <p class="new-title">GJVcorp rI00 recIVA valida617 MULTIPLE</p>
+                </div>
+            </div>
+        </div>
+
+        <input type="file" id="fileInput" accept=".pdf" multiple />
+        <button id="processButton">Procesar</button>
+        <button id="clearButton">Limpiar</button>
+        <button id="printButton">IMPRIMIR</button>
+        <button id="exportExcelButton">EXPORTAR EXCEL</button>
+        <p class="file-help">Selecciona hasta 12 declaraciones PDF para generar un informe consolidado.</p>
+
+        <div class="datos-container">
+            <div class="datos-contribuyente-container">
+                <h2>DATOS CONTRIBUYENTE</h2>
+                <p id="detalleArchivo" class="detalle-archivo"></p>
+                <div id="datosContribuyente"></div>
+            </div>
+
+            <div class="datos-declaracion-container">
+                <h2>DATOS DECLARACION</h2>
+                <div id="datosDeclaracion"></div>
+
+                <div class="declaracion-flex-container">
+                    <div class="declaracion-col izquierda">
+                        <div id="resultadoContainer" class="resultado-container">
+                            <p id="resultado" class="message"></p>
+                        </div>
+
+                        <h3 id="tituloContacto" class="titulo-contacto">Asegura tu recuperacion - CONTACTANOS</h3>
+                        <div class="datos-declaracion-actions"></div>
+                    </div>
+
+                    <div class="declaracion-col derecha"></div>
+                </div>
+            </div>
+        </div>
+
+        <section id="reporteResumenSection" class="reporte-resumen-section">
+            <div class="reporte-resumen-header">
+                <h2 id="toggleResumen" class="toggle-table">
+                    ANALISIS MENSUAL acumulado
+                    <span class="click-text">(clic para revisar)</span>
+                </h2>
+                <p id="reporteResumenMeta" class="reporte-meta"></p>
+            </div>
+            <div id="resumenTableWrapper" class="table-wrapper">
+                <table id="resumenTable" class="table-resumen">
+                    <thead></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <div id="modalSuscripcion" class="modal-suscripcion">
+        <div class="modal-content-suscripcion">
+            <span class="close-modal" id="closeModal">&times;</span>
+
+            <div class="modal-header-suscripcion">
+                <h2 id="modalTituloPlan">Plan REGISTRO</h2>
+                <p class="modal-subtitulo">Recupera tu saldo a favor de IVA con nuestro servicio profesional</p>
+            </div>
+
+            <div class="modal-body-suscripcion">
+                <div class="info-contribuyente-modal">
+                    <h3>Tus Datos</h3>
+                    <div class="datos-grid">
+                        <div class="dato-item">
+                            <span class="dato-label">RUC/Cedula:</span>
+                            <span id="modalRUC" class="dato-value">-</span>
+                        </div>
+                        <div class="dato-item">
+                            <span class="dato-label">Razon Social:</span>
+                            <span id="modalRazonSocial" class="dato-value">-</span>
+                        </div>
+                        <div class="dato-item">
+                            <span class="dato-label">Periodo Fiscal:</span>
+                            <span id="modalPeriodo" class="dato-value">-</span>
+                        </div>
+                        <div class="dato-item destacado">
+                            <span class="dato-label">Saldo a Recuperar:</span>
+                            <span id="modalSaldo" class="dato-value">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="caracteristicas-plan">
+                    <h3>Caracteristicas del Plan</h3>
+                    <div id="modalCaracteristicas" class="lista-caracteristicas"></div>
+                </div>
+
+                <div class="formulario-registro">
+                    <h3>Completa tu informacion</h3>
+                    <form id="formRegistro">
+                        <div class="form-group">
+                            <label for="inputEmail">Correo electronico <span class="required">*</span></label>
+                            <input type="email" id="inputEmail" name="email" placeholder="ejemplo@correo.com" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputTelefono">Telefono celular <span class="required">*</span></label>
+                            <input type="tel" id="inputTelefono" name="telefono" placeholder="0999999999" pattern="[0-9]{10}" required />
+                            <small>Ingresa 10 digitos</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputDireccion">Direccion <span class="required">*</span></label>
+                            <textarea id="inputDireccion" name="direccion" rows="2" placeholder="Calle, numero, ciudad..." required></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="checkboxContratar" name="deseaContratar" />
+                                Deseo contratar este servicio ahora
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="video-info">
+                    <p><strong>Primera vez?</strong> Te recomendamos ver nuestro video tutorial</p>
+                    <button id="modalVideoTutorial" class="btn-secondary">Ver Video Tutorial</button>
+                </div>
+            </div>
+
+            <div class="modal-footer-suscripcion">
+                <button id="btnContinuarRegistro" class="btn-primary-modal">REGISTRARSE</button>
+                <button id="btnCancelar" class="btn-secondary-modal">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalConfirmacion" class="modal-confirmacion">
+        <div class="modal-content-confirmacion">
+            <div class="confirmacion-header">
+                <h2>Registro Exitoso</h2>
+            </div>
+            <div class="confirmacion-body">
+                <div id="contenidoConfirmacion"></div>
+            </div>
+            <div class="confirmacion-footer">
+                <button id="btnCerrarConfirmacion" class="btn-primary-confirmacion">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="JavaScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</body>
+</html>
