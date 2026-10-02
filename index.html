@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:," />
+    <link rel="icon" href="marca/favicon.svg" type="image/svg+xml">
     <title>recuperaIVA</title>
+    <link rel="stylesheet" href="marca/base.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,6 +26,7 @@
             </div>
         </div>
 
+        <label class="visually-hidden" for="fileInput">Declaraciones PDF para analizar</label>
         <input type="file" id="fileInput" accept=".pdf" multiple />
         <button id="processButton">Procesar</button>
         <button id="clearButton">Limpiar</button>
@@ -61,7 +63,7 @@
         <section id="reporteResumenSection" class="reporte-resumen-section">
             <div class="reporte-resumen-header">
                 <h2 id="toggleResumen" class="toggle-table">
-                    ANALISIS MENSUAL acumulado
+                    ANALISIS MENSUAL COMPLETO acumulado
                     <span class="click-text">(clic para revisar)</span>
                 </h2>
                 <p id="reporteResumenMeta" class="reporte-meta"></p>
@@ -168,8 +170,8 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
-    <script src="JavaScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+    <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 </html>

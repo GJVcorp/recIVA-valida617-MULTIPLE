@@ -1,0 +1,51 @@
+:root {
+    --gjv-navy: #0F172A;
+    --gjv-texto-2: #64748B;
+    --gjv-texto-3: #94A3B8;
+    --gjv-borde: #E2E8F0;
+    --gjv-borde-fuerte: #CBD5E1;
+    --gjv-fondo: #F8FAFC;
+    --gjv-superficie: #FFFFFF;
+    --gjv-banda: #F1F5F9;
+    --gjv-exito: #16A34A;
+    --gjv-exito-texto: #166534;
+    --gjv-exito-tenue: #F0FDF4;
+    --gjv-alerta: #F59E0B;
+    --gjv-alerta-texto: #92400E;
+    --gjv-alerta-tenue: #FFFBEB;
+    --gjv-peligro: #DC2626;
+    --gjv-peligro-tenue: #FEF2F2;
+    --gjv-info: #2563EB;
+    --gjv-acento: #0056B3;
+    --gjv-acento-oscuro: #003D80;
+    --gjv-acento-tenue: #DBEAFE;
+
+    --gjv-fuente: "Segoe UI", system-ui, -apple-system, sans-serif;
+    --gjv-fuente-mono: "IBM Plex Mono", Consolas, "Courier New", monospace;
+    --gjv-t-11: 11px;
+    --gjv-t-12: 12px;
+    --gjv-t-14: 14px;
+    --gjv-t-16: 16px;
+    --gjv-t-20: 20px;
+    --gjv-t-28: 28px;
+    --gjv-t-36: 36px;
+
+    --gjv-e-1: 4px;
+    --gjv-e-2: 8px;
+    --gjv-e-3: 12px;
+    --gjv-e-4: 16px;
+    --gjv-e-5: 24px;
+    --gjv-e-6: 32px;
+    --gjv-e-7: 48px;
+    --gjv-e-8: 64px;
+
+    --gjv-r-sm: 8px;
+    --gjv-r-md: 12px;
+    --gjv-r-lg: 16px;
+    --gjv-sombra-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+    --gjv-sombra-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+    --gjv-alto-control: 32px;
+    --gjv-foco: 0 0 0 3px rgba(37, 99, 235, 0.35);
+    --gjv-overlay: rgba(15, 23, 42, 0.72);
+    --gjv-borde-claro: rgba(255, 255, 255, 0.45);
+}
